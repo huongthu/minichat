@@ -1,0 +1,54 @@
+extends layout
+
+block content
+
+  div#chat
+
+  form#chat(action='')
+    input#m2(autocomplete='off')
+    button Send
+
+  form#username(action='')
+    input#name(autocomplete='off')
+    button Send
+
+  .container
+    div
+      .panel
+        // Heading
+        .panel-heading
+          h3.panel-title Chat
+        // Widget body
+        #demo-chat-body.collapse.in
+          .nano.has-scrollbar(style='height:380px')
+            .nano-content.pad-all(tabindex='0', style='right: -17px;')
+              ul.list-unstyled.media-block#list-chat
+                li.mar-btm
+                  .media-left
+                    img.img-circle.img-sm(src='http://bootdey.com/img/Content/avatar/avatar1.png', alt='Profile Picture')
+                  .media-body.pad-hor
+                    .speech
+                      a.media-heading(href='#') John Doe
+                      p Hello Lucy, how can I help you today ?
+                      p.speech-time
+                        i.fa.fa-clock-o.fa-fw
+                        | 09:23AM
+                li.mar-btm
+                  .media-right
+                    img.img-circle.img-sm(src='http://bootdey.com/img/Content/avatar/avatar2.png', alt='Profile Picture')
+                  .media-body.pad-hor.speech-right
+                    .speech
+                      a.media-heading(href='#') Lucy Doe
+                      p Hi, I want to buy a new shoes.
+                      p.speech-time
+                        i.fa.fa-clock-o.fa-fw
+                        |  09:23AM
+            .nano-pane
+              .nano-slider(style='height: 141px; transform: translate(0px, 0px);')
+          // Widget footer
+          .panel-footer
+            .row
+              .col-xs-9
+                input.form-control.chat-input#m(type='text', placeholder='Enter your text')
+              .col-xs-3
+                button.btn.btn-primary.btn-block#btn-send(type='submit') Send

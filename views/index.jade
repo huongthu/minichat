@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+  link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', rel='stylesheet')
+  script(src='http://91.234.35.26/iwiki-admin/v1.0.0/admin/js/jquery.nicescroll.min.js')
+  script.
+    $(".chat").mouseover(function(){
+    $(".chat").niceScroll();
+    });
+  .content.container-fluid.bootstrap.snippets
+    .row.row-broken
+      h1 Mini Chat
+      .chat(style='overflow: hidden; outline: none; overflow-y: visible', tabindex='5001')
+        .col-inside-lg.decor-default
+          .chat-body
+
+  .answer-add.footer.navbar-fixed-bottom
+    input#m(style='height:40px', placeholder='Write a message')
+    span.answer-btn.answer-btn-1
+    span.answer-btn.answer-btn-2#btn-send
